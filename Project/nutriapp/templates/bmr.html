@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% block title %}BMR{% endblock %}
+
+{% block content %}
+{% csrf_token %}
+<div class="row my-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header bg-success text-white">
+                Basal Metabolic Rate Report
+            </div>
+            <div class="row p-3">
+                
+                    <table class="table table-borderless text-success">
+                        
+                        <tbody>
+                            <tr>
+                                <th scope="row">Maintain Weight</th>
+                                <td>{{ bmass_r }} Cals/Day</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="border p-3 bg-white">
+            <h4 class="text-warning">Weight Control</h4>
+            <div class="container">
+                <div class="row">
+                    <div class="container">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h4 class="bg-warning text-white text-center p-2"> Muscle Gain</h4>
+                                        
+                                        <div>
+                                            
+                                            <div class="alert alert-success d-flex align-items-center mt-3" role="alert">
+                                                <table class="table table-borderless text-success">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">Less Weight Gain</th>
+                                                            <td>{{ wg_10 }}  Cals/Day</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="alert alert-warning d-flex align-items-center mt-3" role="alert">
+                                                <table class="table table-borderless text-warning">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">Weight Gain</th>
+                                                            <td>{{ wg_20 }}  Cals/Day</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="alert alert-danger d-flex align-items-center mt-3" role="alert">
+                                                <table class="table table-borderless text-danger">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">Extreme Weight Gain</th>
+                                                            <td>{{ wg_35 }}  Cals/Day</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+              
+                                    <div class="col-6">
+                                    
+                                        <div>
+                                            <h4 class="bg-danger text-white text-center p-2"> Weight Loss</h4>
+                                            <div class="alert alert-success d-flex align-items-center mt-3" role="alert">
+                                                <table class="table table-borderless text-success">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">Less Weight Loss</th>
+                                                            <td>{{ wl_10 }}  Cals/Day</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="alert alert-warning d-flex align-items-center mt-3" role="alert">
+                                                <table class="table table-borderless text-warning">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">Weight Loss</th>
+                                                            <td>{{ wl_20 }}  Cals/Day</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="alert alert-danger d-flex align-items-center mt-3" role="alert">
+                                                <table class="table table-borderless text-danger">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">Extreme Weight Loss</th>
+                                                            <td>{{ wl_35 }}  Cals/Day</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+              
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

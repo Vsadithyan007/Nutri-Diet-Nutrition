@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <div class="col-12">
+        <div class="border p-3 bg-white">
+            <h4 class="text-success">Basal Metabolic Rate</h4>
+            <form method="post">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <div class="d-grid gap-2">
+                <input type="submit" class="btn btn-outline-success" value="Generate Report" ></div>
+            </form>
+            
+            
+            <!-- <div class="alert alert-danger d-flex align-items-center mt-3" role="alert">
+                <div>
+                    This food contains an high amount of sodium. High Sodium causes Sever dehydration and water
+                    retention.
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+
+{% endblock %}

@@ -8,7 +8,7 @@ pip install requests
 Then Run:
 python manage.py runserver
 
-For Database Migrations:
+After Updating the details of the database in 'settings.py', then run:
 python manage.py makemigrations,
 python manage.py migrate
 

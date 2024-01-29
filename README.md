@@ -14,3 +14,7 @@ python manage.py migrate
 
 For Creating Admin:
 python manage.py createsuperuser
+
+
+Demo:
+https://nutriapp.pythonanywhere.com/

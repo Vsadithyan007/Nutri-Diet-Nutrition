@@ -87,9 +87,9 @@ WSGI_APPLICATION = 'Project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'nutri',
-        'USER':'root',
-        'PASSWORD':'mysql',
+        'NAME': 'DATABASE_NAME',
+        'USER':'USERNAME',
+        'PASSWORD':'PASSWORD',
         'PORT':3306,
         'HOST':'localhost'
     }
